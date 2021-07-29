@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Q&A小練習</title>
+  </head>
+  <body>
+    <script>
+      let questions = [
+        {
+          prompt: "蘋果什麼顏色？\nA.橘色\nB.紫色\nC.紅色",
+          answer: "c",
+        },
+        {
+          prompt: "1公尺等於幾公分？\nA.50公分\nB.100公分\nC.1000公分",
+          answer: "b",
+        },
+        {
+          prompt: "鳳梨長在哪裡？\nA.地上\nB.樹上\nC.土裡",
+          answer: "a",
+        },
+      ];
+      let score = 0;
+      for (let i = 0; i < questions.length; i++) {
+        let input = prompt(questions[i].prompt);
+        if (input == questions[i].answer) {
+          score++;
+          alert("答對了！");
+        } else {
+          alert("答錯了唷");
+        }
+      }
+      alert("總共答對了" + score + "題");
+    </script>
+  </body>
+</html>
